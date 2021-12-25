@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package example;
+
+option go_package = "protoc-gen-yaml/";
+
+message ExampleRequest {
+  string value = 1;
+}
+
+message ExampleResponse {
+  Foo foo = 1;
+}
+
+message Foo {
+  message Bar {
+    string value = 1;
+  }
+  string two = 2;
+  string one = 1;
+}
+
+service ExampleService {
+  rpc Example(ExampleRequest) returns (ExampleResponse);
+}
