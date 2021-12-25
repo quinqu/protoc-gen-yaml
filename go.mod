@@ -1,4 +1,4 @@
-module protoc-gen-yaml
+module github.com/quinqu/protoc-gen-yaml
 
 go 1.17
 
